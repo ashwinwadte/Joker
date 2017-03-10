@@ -39,7 +39,8 @@ public class MainActivity extends ActionBarActivity {
 
     private void requestNewInterstitial() {
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("3C246D3ED9D27DD48914C45BF041BCC9")
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice(Utils.DEVICE_ID)
                 .build();
 
         mInterstitialAd.loadAd(adRequest);
